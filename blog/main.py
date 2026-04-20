@@ -161,12 +161,12 @@ def create_comment_handler(
     # with SessionFactory() as session:
     name = request.session.get("name")
     if name is None:
-        raise HTTPException(status_code=401, detail="Unauthorized")
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
     stmt = select(Article).where(Article.id == article_id)
     article = session.execute(stmt).scalars().first()
     if article is None:
         raise HTTPException(
-            status_code=404,
+            status_code=status.HTTP_404_NOT_FOUND,
             detail="Article not found"
         )
     comment = Comment(
