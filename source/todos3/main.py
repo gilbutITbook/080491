@@ -30,7 +30,7 @@ def get_todo_handler(todo_id: int):
     for todo in todos:
         if todo["id"] == todo_id:
             return todo
-    raise HTTPException(status_code=404, detail="Todo not found")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Todo not found")
 
 # 할 일 생성
 @app.post(
@@ -61,7 +61,7 @@ def update_todo_handler(todo_id: int, body: TodoUpdateRequest):
             if body.is_done is not None:
                 todo["is_done"] = body.is_done
             return todo
-    raise HTTPException(status_code=404, detail="Todo not found")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Todo not found")
 
 # 할 일 삭제
 @app.delete(
@@ -73,4 +73,4 @@ def delete_todo_handler(todo_id: int):
         if todo["id"] == todo_id:
             todos.remove(todo)
             return
-    raise HTTPException(status_code=404, detail="Todo not found")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Todo not found")
