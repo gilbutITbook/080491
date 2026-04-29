@@ -1,0 +1,6 @@
+fastapi[standard]==0.128.0
+sqlalchemy
+pymysql
+pwdlib[argon2]
+itsdangerous
+pyjwt
