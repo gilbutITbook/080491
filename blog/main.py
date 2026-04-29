@@ -67,7 +67,7 @@ def get_article_handler(
         return article
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail="Todo not found",
+        detail="Todo not found"
     )
     # finally:
     #     session.close()
@@ -118,7 +118,7 @@ def update_article_handler(
         return article
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail="Todo not found",
+        detail="Todo not found"
     )
     # finally:
     #     session.close()
@@ -161,7 +161,10 @@ def create_comment_handler(
     # with SessionFactory() as session:
     name = request.session.get("name")
     if name is None:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, 
+            detail="Unauthorized"
+        )
     stmt = select(Article).where(Article.id == article_id)
     article = session.execute(stmt).scalars().first()
     if article is None:
