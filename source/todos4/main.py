@@ -46,7 +46,7 @@ def get_todo_handler(todo_id: int):
             return todo
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Todo not found",
+            detail="Todo not found"
         )
     finally:
         session.close()
@@ -90,7 +90,7 @@ def update_todo_handler(todo_id: int, body: TodoUpdateRequest):
             return todo
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Todo not found",
+            detail="Todo not found"
         )
     finally:
         session.close()
