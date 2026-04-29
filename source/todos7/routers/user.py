@@ -58,12 +58,12 @@ def signup_user_handler(
 #         if not user:
 #             raise HTTPException(
 #                 status_code=status.HTTP_401_UNAUTHORIZED,
-#                 detail="이메일 또는 비밀번호가 올바르지 않습니다.",
+#                 detail="이메일 또는 비밀번호가 올바르지 않습니다."
 #             )
 #         if not verify_password(body.password, user.hashed_password):
 #             raise HTTPException(
 #                 status_code=status.HTTP_401_UNAUTHORIZED,
-#                 detail="이메일 또는 비밀번호가 올바르지 않습니다.",
+#                 detail="이메일 또는 비밀번호가 올바르지 않습니다."
 #             )
 #     request.session["user_id"] = user.id
 #     return {"message": "로그인 성공"}
@@ -80,12 +80,12 @@ def login_user_handler(
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="이메일 또는 비밀번호가 올바르지 않습니다.",
+            detail="이메일 또는 비밀번호가 올바르지 않습니다."
         )
     if not verify_password(body.password, user.hashed_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="이메일 또는 비밀번호가 올바르지 않습니다.",
+            detail="이메일 또는 비밀번호가 올바르지 않습니다."
         )
     access_token = create_access_token(user_id=user.id, expires_minutes=60)
     return {"access_token": access_token}
