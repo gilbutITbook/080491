@@ -47,7 +47,7 @@ UPLOAD_DIR = Path("uploads")
 #             return todo
 #         raise HTTPException(
 #             status_code=status.HTTP_404_NOT_FOUND,
-#             detail="Todo not found",
+#             detail="Todo not found"
 #         )
 #     finally:
 #         session.close()
@@ -94,7 +94,7 @@ UPLOAD_DIR = Path("uploads")
 #             return todo
 #         raise HTTPException(
 #             status_code=status.HTTP_404_NOT_FOUND,
-#             detail="Todo not found",
+#             detail="Todo not found"
 #         )
 #     finally:
 #         session.close()
@@ -166,7 +166,7 @@ def get_todo_handler(
         return todo
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail="Todo not found",
+        detail="Todo not found"
     )
     # finally:
     #     session.close()
@@ -228,7 +228,7 @@ def update_todo_handler(
         return todo
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail="Todo not found",
+        detail="Todo not found"
     )
     # finally:
     #     session.close()
