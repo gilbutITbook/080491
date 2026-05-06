@@ -2,7 +2,7 @@
 
 이 저장소에는 <코딩 자율학습 FastAPI 파이썬 백엔드 개발 입문>의 소스코드가 담겨 있습니다.
 
-<img width="400" height="514" alt="Image" src="https://github.com/user-attachments/assets/1087ce38-e1b5-4512-b3ae-97cf836257dc" />
+<img width="400" height="514" alt="Image" style="border: 5px solid gray;" src="https://github.com/user-attachments/assets/7c4fc6f9-82db-47a8-8f69-1e965f5004a6" />
 
 ## 소스코드 다운로드 및 확인 방법
 
